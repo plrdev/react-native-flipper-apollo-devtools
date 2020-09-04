@@ -1,0 +1,33 @@
+{
+  "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
+  "name": "flipper-plugin-apollo-client-devtools",
+  "id": "apollo-client-devtools",
+  "version": "1.0.0",
+  "main": "dist/bundle.js",
+  "flipperBundlerEntry": "src/index.tsx",
+  "license": "MIT",
+  "keywords": [
+    "flipper-plugin"
+  ],
+  "icon": "apps",
+  "title": "Apollo Client Devtools",
+  "scripts": {
+    "lint": "flipper-pkg lint",
+    "prepack": "flipper-pkg lint && flipper-pkg bundle",
+    "build": "flipper-pkg bundle",
+    "watch": "flipper-pkg bundle --watch"
+  },
+  "peerDependencies": {
+    "flipper": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "flipper": "latest",
+    "flipper-pkg": "latest"
+  },
+  "dependencies": {
+    "lodash.flattendeep": "^4.4.0",
+    "prop-types": "^15.7.2"
+  }
+}
