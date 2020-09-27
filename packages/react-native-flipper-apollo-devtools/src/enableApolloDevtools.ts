@@ -1,9 +1,11 @@
 import { addPlugin, Flipper } from 'react-native-flipper'
-import { ApolloClient, NormalizedCache } from '@apollo/client'
+import { ApolloClient, NormalizedCache, NormalizedCacheObject } from '@apollo/client'
+
+type Client = ApolloClient<NormalizedCache | NormalizedCacheObject>
 
 let currentConnection: Flipper.FlipperConnection | null = null
-let client: ApolloClient<NormalizedCache> | null = null
-export const enableFlipperApolloDevtools = (newClient: ApolloClient<NormalizedCache>) => {
+let client: Client | null = null
+export const enableFlipperApolloDevtools = (newClient: Client) => {
   if (client !== newClient) {
     client = newClient
 
