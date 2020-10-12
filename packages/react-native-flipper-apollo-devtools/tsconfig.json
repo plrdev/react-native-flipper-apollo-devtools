@@ -1,6 +1,7 @@
 {
   "include": ["src", "types"],
   "compilerOptions": {
+    "outDir": "dist",
     "module": "esnext",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
